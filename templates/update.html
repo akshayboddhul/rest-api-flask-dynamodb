@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container p-4">
+  <h2>CRUD App with Flask and DynamoDB using Serverless</h2>
+  <br />
+  <form action="/test-flask" method="post">
+    <input
+      type="text"
+      name="id"
+      id="id"
+      class="form-control pt-2 mb-2"
+      placeholder="Enter Id"
+      value="{{todo['id']}}"
+      required
+    />
+    <input
+      type="text"
+      name="title"
+      id="title"
+      class="form-control pt-2 mb-2"
+      placeholder="Enter Todo..."
+      value="{{todo['Title']}}"
+      required
+    />
+    <input
+      type="text"
+      name="description"
+      id="description"
+      class="form-control pt-2 mb-2"
+      placeholder="Enter Description"
+      value="{{todo['Description']}}"
+      required
+    />
+    <input type="submit" value="Update" class="btn btn-primary mb-4 mt-4" />
+  </form>
+</div>
+
+{% endblock %}

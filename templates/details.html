@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container p-4">
+  <h2>CRUD App with Flask and DyanmoDB</h2>
+  <br />
+  <ul class="list-group">
+    <li class="list-group-item">{{ todo['id'] }}</li>
+    <li class="list-group-item">{{ todo['Title'] }}</li>
+    <li class="list-group-item">{{ todo['Description'] }}</li>
+  </ul>
+</div>
+
+{% endblock %}
