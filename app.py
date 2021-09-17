@@ -75,6 +75,12 @@ def todo_details(id):
     return render_template('details.html', todo=todo)
 
 
+@app.route('/delete/<int:id>')
+def todo_delete(id):
+    table.delete_item(Key={'id': str(id)})
+    return redirect('/test-flask')
+
+
 @app.route("/hello")
 def hello():
     return jsonify(message='Hello from path!')
